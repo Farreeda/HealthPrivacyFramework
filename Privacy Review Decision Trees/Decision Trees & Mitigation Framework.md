@@ -70,7 +70,7 @@ Applies to: Health, Wellness, Fitness features + Health Research Studies
 
 ---
 
-## Non-negotiable: When to say NO
+## Immediate termination
 
 | Exposure | Action | Rationale |
 |----------|--------|-----------|
