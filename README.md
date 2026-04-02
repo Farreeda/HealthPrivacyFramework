@@ -98,9 +98,9 @@ let cfg = HealthDPConfig.config(for: .heartRate)
 let checker = KAnonymityChecker()
 let report = checker.check(participants: cohort, k: 5)
 
-print(report.satisfiesKAnonymity)    // Bool
-print(report.minimumClassSize)       // smallest equivalence class
-print(report.suppressionRequired)    // participants to drop for compliance
+print(report.satisfiesKAnonymity)    
+print(report.minimumClassSize)       
+print(report.suppressionRequired)    
 
 // Remove violating participants
 let safeCohort = checker.suppress(participants: cohort, k: 5)
@@ -116,7 +116,6 @@ for violation in violations {
     print("[\(violation.severity.rawValue)] \(violation.description)")
     print("Fix: \(violation.recommendation)")
 }
-// Severity levels: BLOCKER, WARNING, ADVISORY
 ```
 
 ## Re-identification risk
