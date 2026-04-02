@@ -28,21 +28,6 @@ HealthPrivacyStudyDesigner
     ├── Participant
     └── ConsentScope
 ```
-
-## Requirements
-
-- Swift 5.9+
-- macOS 13+ / iOS 16+
-
-## Installation
-
-```swift
-// Package.swift
-dependencies: [
-    .package(url: "https://github.com/yourusername/HealthPrivacyStudyDesigner", from: "1.0.0")
-]
-```
-
 ## Quick start
 
 ```swift
