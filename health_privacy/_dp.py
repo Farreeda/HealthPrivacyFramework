@@ -12,8 +12,8 @@ from typing import Dict, List, Optional, Tuple
 @dataclass
 class MetricDPConfig:
     metric: str
-    sensitivity_range: Tuple[float, float]   # (min, max) plausible value
-    global_sensitivity: float                 # L1/L2 sensitivity for the query
+    sensitivity_range: Tuple[float, float]   # (min, max) plausible clipped value
+    global_sensitivity: float                 # raw L2 sensitivity (full range)
     unit: str
     default_epsilon_share: float = 1.0       # relative weight when splitting budget
 
@@ -22,45 +22,46 @@ _METRIC_CONFIGS: Dict[str, MetricDPConfig] = {
     "vo2_max": MetricDPConfig(
         metric="vo2_max",
         sensitivity_range=(20.0, 80.0),
-        global_sensitivity=5.0,
+        global_sensitivity=60.0,
         unit="mL/kg/min",
         default_epsilon_share=1.2,
     ),
     "resting_heart_rate": MetricDPConfig(
         metric="resting_heart_rate",
         sensitivity_range=(40.0, 110.0),
-        global_sensitivity=10.0,
+        global_sensitivity=70.0,
         unit="bpm",
         default_epsilon_share=1.0,
     ),
     "heart_rate_variability": MetricDPConfig(
         metric="heart_rate_variability",
         sensitivity_range=(10.0, 120.0),
-        global_sensitivity=15.0,
+        global_sensitivity=110.0,
         unit="ms",
         default_epsilon_share=0.8,
     ),
     "active_energy_burned": MetricDPConfig(
         metric="active_energy_burned",
         sensitivity_range=(0.0, 1500.0),
-        global_sensitivity=100.0,
+        global_sensitivity=1500.0,
         unit="kcal",
         default_epsilon_share=0.7,
     ),
     "step_count": MetricDPConfig(
         metric="step_count",
         sensitivity_range=(0.0, 30000.0),
-        global_sensitivity=2000.0,
+        global_sensitivity=30000.0,
         unit="steps",
         default_epsilon_share=0.6,
     ),
 }
 
+
 def _get_config(metric: str) -> MetricDPConfig:
     return _METRIC_CONFIGS.get(metric, MetricDPConfig(
         metric=metric,
         sensitivity_range=(0.0, 100.0),
-        global_sensitivity=10.0,
+        global_sensitivity=100.0,
         unit="units",
         default_epsilon_share=1.0,
     ))
@@ -100,7 +101,10 @@ class EpsilonBudget:
 # ---------------------------------------------------------------------------
 
 class GaussianMechanism:
-    """Adds calibrated Gaussian noise for (ε, δ)-DP."""
+    """Adds calibrated Gaussian noise for (ε, δ)-DP.
+
+    σ = sqrt(2 ln(1.25/δ)) · Δf / ε
+    """
 
     def __init__(self, sensitivity: float, epsilon: float, delta: float = 1e-5):
         self.sensitivity = sensitivity
@@ -109,7 +113,6 @@ class GaussianMechanism:
         self.sigma = self._calibrate()
 
     def _calibrate(self) -> float:
-        # Classic Gaussian mechanism: σ = sqrt(2 ln(1.25/δ)) · Δf / ε
         if self.epsilon <= 0 or self.delta <= 0:
             return float("inf")
         return math.sqrt(2 * math.log(1.25 / self.delta)) * self.sensitivity / self.epsilon
@@ -119,12 +122,15 @@ class GaussianMechanism:
         return self.sigma
 
     def __repr__(self) -> str:
-        return (f"GaussianMechanism(Δ={self.sensitivity}, ε={self.epsilon:.5f}, "
-                f"δ={self.delta}, σ={self.sigma:.4f})")
+        return (f"GaussianMechanism(Δ={self.sensitivity:.6f}, ε={self.epsilon:.5f}, "
+                f"δ={self.delta:.2e}, σ={self.sigma:.6f})")
 
 
 class LaplaceMechanism:
-    """Adds calibrated Laplace noise for ε-DP."""
+    """Adds calibrated Laplace noise for ε-DP.
+
+    b = Δf / ε
+    """
 
     def __init__(self, sensitivity: float, epsilon: float):
         self.sensitivity = sensitivity
@@ -149,18 +155,18 @@ class QueryPlan:
     metric: str
     epsilon_per_query: float
     num_queries: int
-    expected_error_per_query: float   # ≈ σ for Gaussian
+    expected_error_per_query: float   # σ of noise added to the cohort mean
 
 
 @dataclass
 class DPPlan:
     epsilon_budget: float
     query_plans: List[QueryPlan]
-    delta: float = 1e-5
+    delta: float
 
     @property
     def total_epsilon_used(self) -> float:
-        # Simple composition
+        # Sequential composition across all rounds for all metrics
         return sum(qp.epsilon_per_query * qp.num_queries for qp in self.query_plans)
 
     @property
@@ -169,33 +175,50 @@ class DPPlan:
 
 
 class DifferentialPrivacyPlanner:
-    """Allocates the study's ε budget across metrics and query rounds."""
+    """Allocates the study's ε budget across metrics and query rounds.
 
-    DEFAULT_DELTA = 1e-5
+    Noise model
+    -----------
+    We query the *cohort mean* each round. The L2 sensitivity of the mean
+    under add/remove adjacency is:
+
+        Δ_mean = clip_range / cohort_size
+
+    where clip_range = sensitivity_range[1] - sensitivity_range[0].
+
+    δ is set to 1 / (cohort_size²), the standard choice that keeps the
+    (ε, δ)-DP guarantee meaningful at cohort scale.
+
+    Budget composition: simple sequential across rounds, so
+        ε_per_query = ε_allocated_to_metric / num_rounds.
+    """
 
     def plan(self, study) -> DPPlan:
-        from ._study import StudyProtocol  # avoid circular at module level
-
         metrics = study.target_metrics
         budget = study.epsilon_budget
-        duration = study.duration
-        delta = self.DEFAULT_DELTA
+        n = study.target_cohort_size
+        rounds = study.duration.total_samples   # = weeks
 
-        # Number of query rounds per metric = total_samples
-        rounds = duration.total_samples
+        # δ = 1/n² is the standard choice for meaningful (ε,δ)-DP at scale n
+        delta = 1.0 / (n ** 2)
 
-        # Weighted epsilon split
         configs = [_get_config(m) for m in metrics]
         total_weight = sum(c.default_epsilon_share for c in configs)
 
         query_plans: List[QueryPlan] = []
         for cfg in configs:
-            # Per-query epsilon: weight_share / rounds
-            eps_share = (cfg.default_epsilon_share / total_weight) * budget
-            eps_per_query = eps_share / rounds
+            # Epsilon allocated to this metric (weighted share of total budget)
+            eps_metric = (cfg.default_epsilon_share / total_weight) * budget
+            # Per-round epsilon via sequential composition
+            eps_per_query = eps_metric / rounds
+
+            # Sensitivity of the cohort mean:
+            # one participant shifts the mean by at most clip_range / n
+            clip_range = cfg.sensitivity_range[1] - cfg.sensitivity_range[0]
+            mean_sensitivity = clip_range / n
 
             mech = GaussianMechanism(
-                sensitivity=cfg.global_sensitivity,
+                sensitivity=mean_sensitivity,
                 epsilon=eps_per_query,
                 delta=delta,
             )

@@ -125,7 +125,7 @@ class StudyDesigner:
         lines.append(f"Min k-anonymity:   k={study.minimum_k_anonymity}")
         lines.append(f"ε budget:          {study.epsilon_budget:.3f}")
         lines.append(f"")
-        lines.append(f"Consent profile:   {'conservative ✓' if study.consent_scope.is_conservative else 'permissive ⚠'}")
+        lines.append(f"Consent profile:   {'conservative' if study.consent_scope.is_conservative else 'permissive'}")
         lines.append(f"  Raw data off-device:  {study.consent_scope.raw_data_permitted}")
         lines.append(f"  Retention (days):     {study.consent_scope.identifiable_retention_days}")
         lines.append(f"  Withdrawal+deletion:  {study.consent_scope.withdrawal_with_deletion_supported}")
@@ -138,8 +138,8 @@ class StudyDesigner:
         lines.append(f"ε per query:        {eps_per_query:.6f}")
 
         if eps_per_query < 0.001:
-            lines.append(f"⚠ Very tight per-query budget — noise will be high.")
+            lines.append(f"Very tight per-query budget — noise will be high.")
         else:
-            lines.append(f"✓ Per-query budget is workable.")
+            lines.append(f"Per-query budget is workable.")
 
         return StudyAnalysis(summary="\n".join(lines))
