@@ -2,7 +2,7 @@
 
 A Swift package for designing privacy-preserving health research studies. Implements differential privacy, k-anonymity, federated aggregation planning, consent scope enforcement, and re-identification risk estimation. Proposes designs, audit tooling, and review checklists collection. Built for systems like Apple’s HealthKit, ResearchKit, and Data Governance Boards.
 
-# health_privacy
+# HealthPrivacy
 A python package for designing privacy-preserving health research studies. Implements differential privacy, k-anonymity, federated aggregation planning, consent scope enforcement, and re-identification risk estimation. Built for systems like Apple’s HealthKit, ResearchKit, and Data Governance Boards.
 
 
