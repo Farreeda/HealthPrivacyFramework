@@ -1,6 +1,10 @@
 # HealthPrivacyStudyDesigner
 
-A Python-Swift package for designing privacy-preserving health research studies. Implements differential privacy, k-anonymity, federated aggregation planning, consent scope enforcement, and re-identification risk estimation. Proposes designs, audit tooling, and review checklists collection. Built for systems like Apple’s HealthKit, ResearchKit, and Data Governance Boards.
+A Swift package for designing privacy-preserving health research studies. Implements differential privacy, k-anonymity, federated aggregation planning, consent scope enforcement, and re-identification risk estimation. Proposes designs, audit tooling, and review checklists collection. Built for systems like Apple’s HealthKit, ResearchKit, and Data Governance Boards.
+
+# health_privacy
+A python package for designing privacy-preserving health research studies. Implements differential privacy, k-anonymity, federated aggregation planning, consent scope enforcement, and re-identification risk estimation. Built for systems like Apple’s HealthKit, ResearchKit, and Data Governance Boards.
+
 
 ## Overview
 
@@ -159,6 +163,8 @@ swift run hpsd-demo
 ```bash
 swift test
 ```
+## Python notebook
+VO₂ Max Estimation via Apple Watch: End-to-End Privacy Assessment
 
 ## License
 
