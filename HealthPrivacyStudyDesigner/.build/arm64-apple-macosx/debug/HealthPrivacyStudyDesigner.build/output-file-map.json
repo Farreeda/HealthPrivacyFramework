@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/master.swiftdeps"
+  },
+  "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ConsentScope.swift": {
+    "dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ConsentScope.d",
+    "object": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ConsentScope.swift.o",
+    "swiftmodule": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ConsentScope~partial.swiftmodule",
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ConsentScope.swiftdeps"
+  },
+  "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/DPEngine.swift": {
+    "dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/DPEngine.d",
+    "object": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/DPEngine.swift.o",
+    "swiftmodule": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/DPEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/DPEngine.swiftdeps"
+  },
+  "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/FederatedPlan.swift": {
+    "dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/FederatedPlan.d",
+    "object": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/FederatedPlan.swift.o",
+    "swiftmodule": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/FederatedPlan~partial.swiftmodule",
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/FederatedPlan.swiftdeps"
+  },
+  "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/KAnonymityChecker.swift": {
+    "dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/KAnonymityChecker.d",
+    "object": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/KAnonymityChecker.swift.o",
+    "swiftmodule": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/KAnonymityChecker~partial.swiftmodule",
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/KAnonymityChecker.swiftdeps"
+  },
+  "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ReidentificationRisk.swift": {
+    "dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ReidentificationRisk.d",
+    "object": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ReidentificationRisk.swift.o",
+    "swiftmodule": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ReidentificationRisk~partial.swiftmodule",
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ReidentificationRisk.swiftdeps"
+  },
+  "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyDesigner.swift": {
+    "dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyDesigner.d",
+    "object": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyDesigner.swift.o",
+    "swiftmodule": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyDesigner~partial.swiftmodule",
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyDesigner.swiftdeps"
+  },
+  "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyModels.swift": {
+    "dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyModels.d",
+    "object": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyModels.swift.o",
+    "swiftmodule": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyModels.swiftdeps"
+  }
+}

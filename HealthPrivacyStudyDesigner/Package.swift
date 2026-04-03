@@ -13,8 +13,8 @@ let package = Package(
             targets: ["HealthPrivacyStudyDesigner"]
         ),
         .executable(
-            name: "hpsd-demo",
-            targets: ["HPSDDemo"]
+            name: "Demo",
+            targets: ["Demo"]
         ),
     ],
     dependencies: [],
@@ -25,9 +25,9 @@ let package = Package(
             path: "Sources/HealthPrivacyStudyDesigner"
         ),
         .executableTarget(
-            name: "HPSDDemo",
+            name: "Demo",
             dependencies: ["HealthPrivacyStudyDesigner"],
-            path: "Sources/HPSDDemo"
+            path: "Sources/Demo"
         ),
         .testTarget(
             name: "HealthPrivacyStudyDesignerTests",

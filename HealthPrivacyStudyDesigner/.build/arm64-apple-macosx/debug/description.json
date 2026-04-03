@@ -1,0 +1,903 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.xctest/Contents/MacOS/HealthPrivacyStudyDesignerPackageTests",
+      "packagePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner",
+      "productName" : "HealthPrivacyStudyDesignerPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.Demo-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build/sources",
+      "importPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/Demo/Demo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesigner.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "Demo",
+      "moduleOutputPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/Demo.swiftmodule",
+      "objects" : [
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build/Demo.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "Demo_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "healthprivacystudydesigner"
+      ],
+      "outputFileMapPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build/Demo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/Demo.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/Demo/Demo.swift"
+      ],
+      "tempsPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.HealthPrivacyStudyDesigner-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/sources",
+      "importPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ConsentScope.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/DPEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/FederatedPlan.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/KAnonymityChecker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ReidentificationRisk.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyDesigner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "HealthPrivacyStudyDesigner",
+      "moduleOutputPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesigner.swiftmodule",
+      "objects" : [
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ConsentScope.swift.o",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/DPEngine.swift.o",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/FederatedPlan.swift.o",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/KAnonymityChecker.swift.o",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ReidentificationRisk.swift.o",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyDesigner.swift.o",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyModels.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/HealthPrivacyStudyDesigner-Swift.h",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "healthprivacystudydesigner"
+      ],
+      "outputFileMapPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ConsentScope.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/DPEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/FederatedPlan.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/KAnonymityChecker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ReidentificationRisk.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyDesigner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesigner.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ConsentScope.swift",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/DPEngine.swift",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/FederatedPlan.swift",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/KAnonymityChecker.swift",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ReidentificationRisk.swift",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyDesigner.swift",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyModels.swift"
+      ],
+      "tempsPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.HealthPrivacyStudyDesignerPackageTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/sources",
+      "importPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesignerTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "HealthPrivacyStudyDesignerPackageTests",
+      "moduleOutputPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesignerPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/HealthPrivacyStudyDesignerPackageTests-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "healthprivacystudydesigner"
+      ],
+      "outputFileMapPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesignerPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.HealthPrivacyStudyDesignerTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/sources",
+      "importPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Tests/HealthPrivacyStudyDesignerTests/StudyDesignerTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesigner.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "HealthPrivacyStudyDesignerTests",
+      "moduleOutputPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesignerTests.swiftmodule",
+      "objects" : [
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/StudyDesignerTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "healthprivacystudydesigner"
+      ],
+      "outputFileMapPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/StudyDesignerTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules/HealthPrivacyStudyDesignerTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Tests/HealthPrivacyStudyDesignerTests/StudyDesignerTests.swift"
+      ],
+      "tempsPath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "Demo" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "Demo",
+      "-package-name",
+      "healthprivacystudydesigner",
+      "-incremental",
+      "-c",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/Demo/Demo.swift",
+      "-I",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "Demo_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "healthprivacystudydesigner",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "HealthPrivacyStudyDesigner" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "HealthPrivacyStudyDesigner",
+      "-package-name",
+      "healthprivacystudydesigner",
+      "-incremental",
+      "-c",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ConsentScope.swift",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/DPEngine.swift",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/FederatedPlan.swift",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/KAnonymityChecker.swift",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ReidentificationRisk.swift",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyDesigner.swift",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyModels.swift",
+      "-I",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/HealthPrivacyStudyDesigner-Swift.h",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "healthprivacystudydesigner",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "HealthPrivacyStudyDesignerPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "HealthPrivacyStudyDesignerPackageTests",
+      "-package-name",
+      "healthprivacystudydesigner",
+      "-incremental",
+      "-c",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/HealthPrivacyStudyDesignerPackageTests-Swift.h",
+      "-color-diagnostics",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "healthprivacystudydesigner",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "HealthPrivacyStudyDesignerTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "HealthPrivacyStudyDesignerTests",
+      "-package-name",
+      "healthprivacystudydesigner",
+      "-incremental",
+      "-c",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Tests/HealthPrivacyStudyDesignerTests/StudyDesignerTests.swift",
+      "-I",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "healthprivacystudydesigner",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "Demo" : [
+      "HealthPrivacyStudyDesigner"
+    ],
+    "HealthPrivacyStudyDesigner" : [
+
+    ],
+    "HealthPrivacyStudyDesignerPackageTests" : [
+      "HealthPrivacyStudyDesignerTests",
+      "HealthPrivacyStudyDesigner"
+    ],
+    "HealthPrivacyStudyDesignerTests" : [
+      "HealthPrivacyStudyDesigner"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "writeCommands" : {
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo-entitlement.plist"
+    },
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/Demo/Demo.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build/sources"
+    },
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.build/Demo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ConsentScope.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/DPEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/FederatedPlan.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/KAnonymityChecker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ReidentificationRisk.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyDesigner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyModels.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/Demo.product/Objects.LinkFileList"
+    },
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ConsentScope.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/DPEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/FederatedPlan.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/KAnonymityChecker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/ReidentificationRisk.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyDesigner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Sources/HealthPrivacyStudyDesigner/StudyModels.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/sources"
+    },
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/sources"
+    },
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ConsentScope.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/DPEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/FederatedPlan.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/KAnonymityChecker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/ReidentificationRisk.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyDesigner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/StudyModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/StudyDesignerTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Tests/HealthPrivacyStudyDesignerTests/StudyDesignerTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/sources"
+    },
+    "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

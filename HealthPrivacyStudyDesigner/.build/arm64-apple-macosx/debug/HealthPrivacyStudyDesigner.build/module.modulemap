@@ -1,0 +1,4 @@
+module HealthPrivacyStudyDesigner {
+    header "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesigner.build/HealthPrivacyStudyDesigner-Swift.h"
+    requires objc
+}

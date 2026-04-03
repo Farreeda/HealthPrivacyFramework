@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/master.swiftdeps"
+  },
+  "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/Tests/HealthPrivacyStudyDesignerTests/StudyDesignerTests.swift": {
+    "dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/StudyDesignerTests.d",
+    "object": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/StudyDesignerTests.swift.o",
+    "swiftmodule": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/StudyDesignerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/faridaabdelazeez/HealthPrivacyFramework/HealthPrivacyStudyDesigner/.build/arm64-apple-macosx/debug/HealthPrivacyStudyDesignerTests.build/StudyDesignerTests.swiftdeps"
+  }
+}
