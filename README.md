@@ -155,14 +155,9 @@ print(risk.mitigations)      // Actionable recommendations
 ## Running the demo
 
 ```bash
-swift run hpsd-demo
+swift run Demo
 ```
 
-## Tests
-
-```bash
-swift test
-```
 ## Python notebook
 VO₂ Max Estimation via Apple Watch: End-to-End Privacy Assessment
 
