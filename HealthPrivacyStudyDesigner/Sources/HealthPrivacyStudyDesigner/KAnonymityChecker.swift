@@ -39,7 +39,8 @@ public struct KAnonymityChecker: Sendable {
     ///   - participants: The study cohort.
     ///   - k: Minimum equivalence class size (default 5, Apple Research minimum).
     ///   - includeBMI: Whether BMI tier is included as a quasi-identifier.
-    ///     Only include if BMI is explicitly collected — adding unnecessary QIs increases suppression.
+    ///     Only include if BMI is explicitly collected
+    ///     adding unnecessary QIs increases suppression.
     public func check(
         participants: [Participant],
         k: Int = 5,
@@ -59,7 +60,7 @@ public struct KAnonymityChecker: Sendable {
                         biologicalSex: participant.biologicalSex,
                         region: participant.region,
                         bmiTier: includeBMI ? participant.bmiTier : nil,
-                        count: 0,       // will be replaced
+                        count: 0,      
                         satisfiesK: false
                     ),
                     1

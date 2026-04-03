@@ -1,7 +1,7 @@
 import Foundation
 import HealthPrivacyStudyDesigner
 
-// MARK: - Demo: Apple Fitness+ VO2 Max Research Study
+// Demo: Apple Fitness+ VO2 Max Research Study
 //
 // This simulates the privacy design process for a study measuring
 // cardiorespiratory fitness improvement among Apple Watch users
