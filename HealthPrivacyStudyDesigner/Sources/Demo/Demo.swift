@@ -28,7 +28,7 @@ let consent = ConsentScope(
     permittedMetrics: [.vo2Max, .heartRate, .heartRateVariability, .restingHeartRate, .activeEnergyBurned],
     rawDataPermitted: false,
     healthKitLinkagePermitted: false,
-    futureResearchPermitted: false,
+    futureResearchPermitted: true,   // aggregated federated results may inform future studies
     thirdPartyResearchPermitted: false,
     identifiableRetentionDays: 60,
     anonymisedRetentionDays: nil,
@@ -73,7 +73,7 @@ let regions = ["CA", "TX", "NY", "FL", "WA", "IL", "MA", "CO", "OR", "GA"]
 let ageBuckets = AgeBucket.allCases.filter { $0 != .under18 }
 let sexes = BiologicalSex.allCases
 
-for _ in 0..<200 {
+for _ in 0..<2000 {
     participants.append(Participant(
         ageBucket: ageBuckets.randomElement()!,
         biologicalSex: sexes.randomElement()!,
@@ -112,18 +112,24 @@ print()
 print("─── Differential Privacy Demo ───────────────────────────────")
 
 let cfg = HealthDPConfig.config(for: .vo2Max)
-let gaussian = GaussianMechanism(globalSensitivity: 60.0)  // physiological range ~20-80
-let epsilonPerQuery = 0.3
+// Sensitivity of the cohort mean: one participant shifts it by at most range/n
+let vo2Range = 60.0          // physiological range 20–80 mL/kg/min
+let cohortN = 5000.0
+let cohortDelta = 1.0 / (cohortN * cohortN)   // 4e-8
+let gaussian = GaussianMechanism(globalSensitivity: vo2Range / cohortN, delta: cohortDelta)
+let epsilonPerQuery = 1.0 / 5.0 / 12.0   // budget/metrics/rounds = 0.0167
 let trueVO2 = 52.4   // mL/kg/min
 
 print("True VO2 max: \(trueVO2) mL/kg/min")
-print("Noise σ (ε=\(epsilonPerQuery)): \(String(format: "%.2f", gaussian.sigma(epsilon: epsilonPerQuery)))")
-print("Expected error: ±\(String(format: "%.2f", gaussian.expectedError(epsilon: epsilonPerQuery))) mL/kg/min")
+print("Cohort mean sensitivity Δ: \(String(format: "%.4f", vo2Range / cohortN)) mL/kg/min")
+print("Noise σ (ε=\(String(format: "%.4f", epsilonPerQuery))): \(String(format: "%.4f", gaussian.sigma(epsilon: epsilonPerQuery)))")
+print("Expected error on cohort mean: ±\(String(format: "%.4f", gaussian.expectedError(epsilon: epsilonPerQuery))) mL/kg/min")
 print()
-print("5 private readings with ε=\(epsilonPerQuery):")
+print("5 private cohort-mean readings with ε=\(String(format: "%.4f", epsilonPerQuery)):")
+let trueCohortMean = trueVO2
 for i in 1...5 {
-    let privatised = gaussian.privatise(trueVO2, epsilon: epsilonPerQuery)
-    print("  Reading \(i): \(String(format: "%.2f", privatised)) mL/kg/min  (error: \(String(format: "%+.2f", privatised - trueVO2)))")
+    let privatised = trueCohortMean + gaussian.privatise(0.0, epsilon: epsilonPerQuery)
+    print("  Reading \(i): \(String(format: "%.4f", privatised)) mL/kg/min  (error: \(String(format: "%+.4f", privatised - trueCohortMean)))")
 }
 print()
 

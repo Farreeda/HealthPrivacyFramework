@@ -196,7 +196,17 @@ public struct DifferentialPrivacyPlanner: Sendable {
     /// Allocates the epsilon budget across metrics and queries for a study protocol.
     public func plan(for studyProtocol: StudyProtocol) -> StudyDPPlan {
         let metrics = studyProtocol.targetMetrics
-        let totalSamples = studyProtocol.duration.totalSamplesPerParticipant
+        let n = Double(studyProtocol.targetCohortSize)
+
+        // Aggregation rounds = weeks (one federated round per week).
+        // Raw device samples (totalSamplesPerParticipant) are on-device only;
+        // the server receives one aggregate per round.
+        let numRounds = studyProtocol.duration.weeks
+
+        // δ = 1/n² is the standard choice for (ε,δ)-DP at cohort scale.
+        let delta = 1.0 / (n * n)
+
+        // Split budget evenly across metrics.
         let budgetPerMetric = studyProtocol.epsilonBudget / Double(metrics.count)
 
         var queryPlans: [QueryPlan] = []
@@ -204,39 +214,45 @@ public struct DifferentialPrivacyPlanner: Sendable {
 
         for metric in metrics {
             let cfg = HealthDPConfig.config(for: metric)
-            let numQueries = totalSamples   // one query per sample interval per metric
-            let epsilonPerQuery = min(cfg.recommendedEpsilonPerQuery, budgetPerMetric / Double(numQueries))
-            let totalForMetric = epsilonPerQuery * Double(numQueries)
 
-            // Calculate expected error for the chosen mechanism
+            // Sequential composition across rounds: ε/round = metric budget / rounds.
+            let epsilonPerQuery = budgetPerMetric / Double(numRounds)
+            let totalForMetric = epsilonPerQuery * Double(numRounds)
+
+            // Sensitivity of the cohort mean: one participant can shift it by at most
+            // clip_range / n (not the raw clip_range).
+            let clipRange = cfg.sensitivityRange.upperBound - cfg.sensitivityRange.lowerBound
+            let meanSensitivity = clipRange / n
+
             let expectedError: Double
             switch cfg.mechanism {
             case .laplace:
-                let lm = LaplaceMechanism(globalSensitivity: cfg.sensitivityRange.upperBound - cfg.sensitivityRange.lowerBound)
+                let lm = LaplaceMechanism(globalSensitivity: meanSensitivity)
                 expectedError = lm.expectedError(epsilon: epsilonPerQuery)
             case .gaussian:
-                let gm = GaussianMechanism(globalSensitivity: cfg.sensitivityRange.upperBound - cfg.sensitivityRange.lowerBound)
+                let gm = GaussianMechanism(globalSensitivity: meanSensitivity, delta: delta)
                 expectedError = gm.expectedError(epsilon: epsilonPerQuery)
             }
 
             queryPlans.append(QueryPlan(
                 metric: metric,
-                numberOfQueries: numQueries,
+                numberOfQueries: numRounds,
                 epsilonPerQuery: epsilonPerQuery,
                 totalEpsilonForMetric: totalForMetric,
                 mechanism: cfg.mechanism,
                 expectedErrorPerQuery: expectedError
             ))
 
-            // Flag metrics where noise will likely overwhelm signal
-            let signalRange = cfg.sensitivityRange.upperBound - cfg.sensitivityRange.lowerBound
-            if expectedError > signalRange * 0.25 {
+            // Flag if cohort-mean noise exceeds 5% of physiological range.
+            if expectedError > clipRange * 0.10 {
+                let errStr = String(format: "%.4f", expectedError)
                 recommendations.append(
-                    "\(metric.rawValue): expected error (±\(String(format: "%.1f", expectedError)) \(cfg.unit)) is >25% of physiological range. " +
-                    "Consider increasing epsilon allocation or reducing sampling frequency."
+                    "\(metric.rawValue): cohort mean error (±\(errStr) \(cfg.unit)) " +
+                    "exceeds 5% of physiological range. Consider increasing epsilon or cohort size."
                 )
             }
         }
+
 
         let totalEpsilon = queryPlans.reduce(0) { $0 + $1.totalEpsilonForMetric }
 
