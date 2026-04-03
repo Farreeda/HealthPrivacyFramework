@@ -1,6 +1,10 @@
 # HealthPrivacyStudyDesigner
 
-A Python-Swift package for designing privacy-preserving health research studies. Implements differential privacy, k-anonymity, federated aggregation planning, consent scope enforcement, and re-identification risk estimation. Proposes designs, audit tooling, and review checklists collection. Built for systems like Apple’s HealthKit, ResearchKit, and Data Governance Boards.
+A Swift package for designing privacy-preserving health research studies. Implements differential privacy, k-anonymity, federated aggregation planning, consent scope enforcement, and re-identification risk estimation. Proposes designs, audit tooling, and review checklists collection. Built for systems like Apple’s HealthKit, ResearchKit, and Data Governance Boards.
+
+# HealthPrivacy
+A python package for designing privacy-preserving health research studies. Implements differential privacy, k-anonymity, federated aggregation planning, consent scope enforcement, and re-identification risk estimation. Built for systems like Apple’s HealthKit, ResearchKit, and Data Governance Boards.
+
 
 ## Overview
 
@@ -98,9 +102,9 @@ let cfg = HealthDPConfig.config(for: .heartRate)
 let checker = KAnonymityChecker()
 let report = checker.check(participants: cohort, k: 5)
 
-print(report.satisfiesKAnonymity)    // Bool
-print(report.minimumClassSize)       // smallest equivalence class
-print(report.suppressionRequired)    // participants to drop for compliance
+print(report.satisfiesKAnonymity)    
+print(report.minimumClassSize)       
+print(report.suppressionRequired)    
 
 // Remove violating participants
 let safeCohort = checker.suppress(participants: cohort, k: 5)
@@ -116,7 +120,6 @@ for violation in violations {
     print("[\(violation.severity.rawValue)] \(violation.description)")
     print("Fix: \(violation.recommendation)")
 }
-// Severity levels: BLOCKER, WARNING, ADVISORY
 ```
 
 ## Re-identification risk
@@ -160,6 +163,8 @@ swift run hpsd-demo
 ```bash
 swift test
 ```
+## Python notebook
+VO₂ Max Estimation via Apple Watch: End-to-End Privacy Assessment
 
 ## License
 
